@@ -1,4 +1,6 @@
 #remember to save and test your code often
+#https://trinket.io/python/e5a03e7cbc
+#https://coding-grace-guide.readthedocs.io/en/latest/guide/lessonplans/beginners-python-text-based-adventure.html
 print("\n THAD'S SCI-FI MYSTERY GAME!")
 print('\n Once you start playing, you will be asked questions throughout the game. You will have two options for each question, and you must enter "1" or "2" to select your answer.')
 print('\n Typing "1" will select the first option, and typing "2" will select the second option.')
