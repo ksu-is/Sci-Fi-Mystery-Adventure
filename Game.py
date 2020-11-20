@@ -1,4 +1,6 @@
-#remember to save and test your code often
+Python 3.8.6 (tags/v3.8.6:db45529, Sep 23 2020, 15:52:53) [MSC v.1927 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> #remember to save and test your code often
 #https://trinket.io/python/e5a03e7cbc
 #https://coding-grace-guide.readthedocs.io/en/latest/guide/lessonplans/beginners-python-text-based-adventure.html
 print("\n THAD'S SCI-FI MYSTERY GAME!")
@@ -20,6 +22,16 @@ while True:
                 break
             elif door_q == '2':
                 print('\n You manage to escape from the creature. You have reached another hallway with two doors.')
+                runaway_q = input('Option 1: You head through the door labeled "DOCKING BAY". Option 2: You head through the door labeled "ARMORY."')
+                while True:
+                    if runaway_q == '1':
+                        print('\n Upon entering the docking bay, you see that there is a massive spacecraft docked onto the ship. Sentient creatures with human-sized mouths proceed to capture and eat you. GAME OVER.')
+                        break
+                    elif runaway_q == '2':
+                        print('\n Upon entering the armory, you instinctively grab a few weapons from the walls. Shortly after, hundreds of creatures like the one you ran away from begin to charge you. The high tech weapons allow you to fight your way to an escape pod, and you safely escape. END OF GAME.')
+                        break
+            else:
+                print('\n Invalid response. Try again.')
     elif first_q == '2':
         print('\n You climb the ladder and go through the hatch. You appear to be in the living quarters.')
         hatch_q = input('Option 1: You explore the living quarters in hope of finding any information. Option 2: Feeling tired, you decide to take a nap on one of the beds.')
@@ -29,5 +41,7 @@ while True:
             elif hatch_q == '2':
                 print('\n While sleeping, you are eaten, END OF GAME.')
                 break
+            else:
+                print('\n Invalid response. Try again.')
     else:
         print('\n Invalid response. Try again.')
