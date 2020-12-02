@@ -1,6 +1,4 @@
-Python 3.8.6 (tags/v3.8.6:db45529, Sep 23 2020, 15:52:53) [MSC v.1927 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license()" for more information.
->>> #remember to save and test your code often
+#remember to save and test your code often
 #https://trinket.io/python/e5a03e7cbc
 #https://coding-grace-guide.readthedocs.io/en/latest/guide/lessonplans/beginners-python-text-based-adventure.html
 print("\n THAD'S SCI-FI MYSTERY GAME!")
@@ -19,17 +17,17 @@ while True:
         while True:
             if door_q == '1':
                 print('\n You try to fight, but the creature unfortunetly eats you. END OF GAME.')
-                break
+                quit()
             elif door_q == '2':
                 print('\n You manage to escape from the creature. You have reached another hallway with two doors.')
                 runaway_q = input('Option 1: You head through the door labeled "DOCKING BAY". Option 2: You head through the door labeled "ARMORY."')
                 while True:
                     if runaway_q == '1':
                         print('\n Upon entering the docking bay, you see that there is a massive spacecraft docked onto the ship. Sentient creatures with human-sized mouths proceed to capture and eat you. GAME OVER.')
-                        break
+                        quit()
                     elif runaway_q == '2':
-                        print('\n Upon entering the armory, you instinctively grab a few weapons from the walls. Shortly after, hundreds of creatures like the one you ran away from begin to charge you. The high tech weapons allow you to fight your way to an escape pod, and you safely escape. END OF GAME.')
-                        break
+                        print('\n Upon entering the armory, you instinctively grab a few weapons from the walls. Shortly after, hundreds of creatures (like the one you ran away from) begin to charge you. The high tech weapons allow you to fight your way to an escape pod, and you safely escape. END OF GAME.')
+                        quit()
             else:
                 print('\n Invalid response. Try again.')
     elif first_q == '2':
@@ -38,9 +36,27 @@ while True:
         while True:
             if hatch_q == '1':
                 print('\n After looking around, you find a hologram message near one of the beds. The hologram shows a shipmate explaining that an unknown pirate spacecraft has docked onto the ship you are currently in. The hologram cuts out suddenly.')
+                hologram_q = input('Option 1: You head to the restroom to use the toilet. Option 2: You take the elavator up to the top of the ship.')
+                while True:
+                    if hologram_q == '1':
+                        print('\n Upon using the toilet, a creature crawls out of the toilet and eats you. GAME OVER.')
+                        quit()
+                    elif hologram_q == '2':
+                        print('\n After reaching the top of the ship, you are face to face with the cockpit doors and the escape pods.')
+                        final_q = input('Option 1: You head into the cockpit. Option 2: You take an escape pod and leave the ship.')
+                        if final_q == '1':
+                            print('\n You enter the cockpit and find the full security feed. You watch the tapes as you discover that an alien pirate ship has come to pillage your ship. Your memories come flooding back as you are eaten by one of the aliens. GAME OVER.')
+                            quit()
+                        elif final_q == '2':
+                            print('\n You take an escape pod and sucessfully escape from the ships. Yet, you wonder what really happened there. END OF GAME.')
+                            quit()
+                        else:
+                            print('\n Invalid response. Try again.')
+                    else:
+                        print('\n Invalid response. Try again.')
             elif hatch_q == '2':
                 print('\n While sleeping, you are eaten, END OF GAME.')
-                break
+                quit()
             else:
                 print('\n Invalid response. Try again.')
     else:
