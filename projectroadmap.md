@@ -9,11 +9,11 @@ First sprint:
 Second sprint:
 [x] Begin writing code for game
 [x] Compare code with forked repository
-[ ] Commit at least 6 code changes
+[x] Commit at least 6 code changes
 [x] Paste 2 URLs to code commits
 
 
 Third sprint:
-[ ] Continue writing code and testing
-[ ] Create one PowerPoint slide
-[ ] Upload slide
+[x] Continue writing code and testing
+[x] Create one PowerPoint slide
+[x] Upload slide
