@@ -19,14 +19,19 @@ def initial_game():
                 print('\n You try to fight, but the creature unfortunetly eats you. END OF GAME.')
                 quit()
             elif door_q == '2':
-                print('\n You manage to escape from the creature. You have reached another hallway with two doors.')
-                runaway_q = input('Option 1: You head through the door labeled "DOCKING BAY". Option 2: You head through the door labeled "ARMORY."')
-                if runaway_q == '1':
-                    print('\n Upon entering the docking bay, you see that there is a massive spacecraft docked onto the ship. Sentient creatures with human-sized mouths proceed to capture and eat you. GAME OVER.')
-                    quit()
-                elif runaway_q == '2':
-                    print('\n Upon entering the armory, you instinctively grab a few weapons from the walls. Shortly after, hundreds of creatures (like the one you ran away from) begin to charge you. The high tech weapons allow you to fight your way to an escape pod and you safely escape. END OF GAME.')
-                    quit()
+                def hallway_game():
+                    print('\n You manage to escape from the creature. You have reached another hallway with two doors.')
+                    runaway_q = input('Option 1: You head through the door labeled "DOCKING BAY". Option 2: You head through the door labeled "ARMORY."')
+                    if runaway_q == '1':
+                        print('\n Upon entering the docking bay, you see that there is a massive spacecraft docked onto the ship. Sentient creatures with human-sized mouths proceed to capture and eat you. GAME OVER.')
+                        quit()
+                    elif runaway_q == '2':
+                        print('\n Upon entering the armory, you instinctively grab a few weapons from the walls. Shortly after, hundreds of creatures (like the one you ran away from) begin to charge you. The high tech weapons allow you to fight your way to an escape pod and you safely escape. END OF GAME.')
+                        quit()
+                    else:
+                        print('\n Invalid response. Try again. ')
+                        hallway_game()
+                hallway_game()
             else:
                 print('\n Invalid response. Try again.')
                 door_game()
